@@ -1,0 +1,41 @@
+Q1 Write a Program to print all prime numbers between two given numbers including boundry number.
+
+#include <stdio.h>
+int main() {
+    int l,u,x,i;
+    printf("Enter two numbers: ");
+    scanf("%d %d",&l,&u);
+    
+    for(x=l;x<=u;x++)
+    {
+        for(i=2;i<x;i++)
+        if(x%i==0)
+        break;
+        
+        if(i==x)
+        printf("%d",x);
+    }
+    return 0;
+
+Q2 Write a Programm to check whether tow given numbers are co-prime numbers or not.
+   HCF(a,b)=1
+
+#include <stdio.h>
+int main(){
+  int a,b,H;
+  printf("Enter two numbers");
+  scanf("%d %d",&a, &b);
+
+  for(H=a<b?a:b;H>=1;H--)
+  {
+      if(a%H==0 && b%h==0)
+        break;
+  }
+    if(H==1)
+    printf("Yes Co-Prime");
+    else
+    printf("Not Co-Prime");
+
+  }
+  retrun 0;
+}
